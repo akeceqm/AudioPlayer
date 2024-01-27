@@ -11,7 +11,7 @@ namespace AudioPlayer
     {
         int currentSongIndex = 0;
         private List<string> listMusic;
-        WaveOutEvent outputDevice = new WaveOutEvent();
+        WaveOutEvent outputDevice = new();
 
         public ChangeTrack(List<string> listMusic, WaveOutEvent outputDevice)
         {
@@ -29,7 +29,7 @@ namespace AudioPlayer
                 outputDevice.Stop();
                 currentSongIndex = (currentSongIndex + 1) % listMusic.Count;
 
-                Console.WriteLine($"Переключено на следующую песню: {listMusic[currentSongIndex]}");
+                Console.WriteLine($"\nПереключено на следующую песню: {listMusic[currentSongIndex]}");
 
                 var newAudioReader = new AudioFileReader(listMusic[currentSongIndex]);
 
@@ -49,7 +49,7 @@ namespace AudioPlayer
                 outputDevice.Stop();
                 currentSongIndex = (currentSongIndex - 1 + listMusic.Count) % listMusic.Count;
 
-                Console.WriteLine($"Переключено на предыдущую песню: {listMusic[currentSongIndex]}");
+                Console.WriteLine($"\nПереключено на предыдущую песню: {listMusic[currentSongIndex]}");
 
                 var newAudioReader = new AudioFileReader(listMusic[currentSongIndex]);
 

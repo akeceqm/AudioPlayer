@@ -12,7 +12,7 @@ namespace AudioPlayer
 
         public AudioListContainer()
         {
-            listMusic = new List<string>();
+            listMusic = [];
         }
     }
 }
