@@ -24,8 +24,9 @@ namespace AudioPlayer
         public void Run()
         {
             Console.WriteLine("Введите путь к аудиофайлу или папке:");
-            string filePath = "G:\\Music";
+            string filePath = Console.ReadLine().Trim(new char[] {' ','*','"'});
 
+            
             if (File.Exists(filePath))
             {
                 listMusic.Add(filePath);

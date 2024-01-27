@@ -17,7 +17,7 @@ namespace AudioPlayer
         {
             this.listMusic = listMusic;
             this.outputDevice = outputDevice;
-            this.currentSongIndex = 0;
+            currentSongIndex = 0;
         }
 
 
